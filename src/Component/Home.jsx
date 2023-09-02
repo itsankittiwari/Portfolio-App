@@ -21,9 +21,9 @@ function Home() {
                 </h1>
             </header>
             <section className="section Ow">
-                <div className="container container-center">
+                <div className="container">
                     <h1>Skills</h1>
-                    <p>I'm famillar with HTML5,CSS3,Git,JavaScript,NodeJs,ReactJs,Mysql,and Web Hosting</p>
+                    <p>I'm famillar with HTML5, CSS3, Git, JavaScript, NodeJs, ReactJs, Mysql and Web Hosting</p>
                 </div>
             </section>
             <section className="section">
