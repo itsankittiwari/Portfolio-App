@@ -1,25 +1,40 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import img3 from '../assets/images/Web-developer.png'
+import { FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa"
+import { GiHamburgerMenu } from 'react-icons/gi';
 
 function SubBlog2() {
-  return (
-    <div>
-           <nav className="navigation container">
+    const [isNavOpen, setIsNavOpen] = useState(false);
+
+    const toggleNav = () => {
+        setIsNavOpen(!isNavOpen);
+    };
+    return (
+        <div>
+            <nav className='navigation'>
+
                 <div className="nav-brand">Portfolio</div>
-                <ul className="list-non-bullet nav-pills ">
-                    <li className="list-item-inline"><Link className="link" to="/">Home</Link></li>
-                    <li className="list-item-inline"><Link className="link" to="/projects">Projects</Link></li>
-                    <li className="list-item-inline"><Link className="link  link-active" to="/blogs">Blogs</Link></li>
-                </ul>
+                <div className='hamburger-menu' onClick={toggleNav} >
+                    <GiHamburgerMenu />
+                </div>
+                <div className={
+                    isNavOpen ? "navigation-menu expanded" : "navigation-menu"
+                }>
+                    <ul>
+                        <li><Link className="link2" to="/">Home</Link></li>
+                        <li><Link className="link2" to="/projects">Projects</Link></li>
+                        <li><Link className="link2  link-active" to="/blogs">Blogs</Link></li>
+                    </ul>
+                </div>
             </nav>
-            
+
             <section className="Ow">
                 <div className="container">
                     <h1>Unveiling the Journey of a Web Developer: Crafting the Digital World</h1><br />
-                  
+
                     <header className="hero">
-                    <img className="hero-img" src={img3} />
+                        <img className="hero-img" src={img3} />
                     </header>
                     <br />
                     <p>In today's digital age, the web is the canvas upon which countless experiences unfold. Behind every stunning website, interactive app, and captivating user interface stands a web developer—a master of code, design, and creativity. In this blog, we'll take you on a journey into the world of web development, exploring the roles, skills, and challenges that shape these modern-day artisans.</p>
@@ -63,15 +78,15 @@ function SubBlog2() {
                     <footer className="footer">
                         <div className="footer-header">Contact me with Social-Media platforms</div>
                         <ul className="social-links list-non-bullet">
-                            <li className="list-item-inline"><Link className="link" to="https://www.instagram.com/ankittiwari328/" target='_blank'>Instagram</Link></li>
-                            <li className="list-item-inline"><Link className="link" to="https://twitter.com/home" target='_blank'>Twitter</Link></li>
-                            <li className="list-item-inline"><Link className="link" to="https://www.linkedin.com/in/ankit-tiwari-7534a41b3/" target='_blank'>Linkedin</Link></li>
+                            <li className="list-item-inline"><Link className="link" to="https://www.instagram.com/ankittiwari328/" target='_blank'><FaInstagram className='Instagram' /></Link></li>
+                            <li className="list-item-inline"><Link className="link" to="https://twitter.com/home" target='_blank'><FaTwitter className='twitter' /></Link></li>
+                            <li className="list-item-inline"><Link className="link" to="https://www.linkedin.com/in/ankit-tiwari-7534a41b3/" target='_blank'><FaLinkedin className='linkedin' /></Link></li>
                         </ul>
                     </footer>
                 </div>
             </section>
-    </div>
-  )
+        </div>
+    )
 }
 
 export default SubBlog2

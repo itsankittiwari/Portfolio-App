@@ -1,28 +1,39 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import img2 from '../assets/images/5283217.jpg'
+import { FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa"
+import { GiHamburgerMenu } from 'react-icons/gi';
 function SubBlog1() {
+
+    const [isNavOpen, setIsNavOpen] = useState(false);
+
+    const toggleNav = () => {
+        setIsNavOpen(!isNavOpen);
+    };
     return (
-        <div>
-            <nav className="navigation container">
+        <>
+            <nav className='navigation'>
+
                 <div className="nav-brand">Portfolio</div>
-                <ul className="list-non-bullet nav-pills ">
-                    <li className="list-item-inline"><Link className="link" to="/">Home</Link></li>
-                    <li className="list-item-inline"><Link className="link" to="/projects">Projects</Link></li>
-                    <li className="list-item-inline"><Link className="link  link-active" to="/blogs">Blogs</Link></li>
-                </ul>
+                <div className='hamburger-menu' onClick={toggleNav} >
+                    <GiHamburgerMenu />
+                </div>
+                <div className={
+                    isNavOpen ? "navigation-menu expanded" : "navigation-menu"
+                }>
+                    <ul>
+                        <li><Link className="link2" to="/">Home</Link></li>
+                        <li><Link className="link2" to="/projects">Projects</Link></li>
+                        <li><Link className="link2 link-active" to="/blogs">Blogs</Link></li>
+                    </ul>
+                </div>
             </nav>
-            {/* <header className="hero">
-        <h1 className="hero-heading">
-          Welcome to my ! <span className="heading-inverted">Blog</span>
-        </h1>
-      </header> */}
             <section className="Ow">
                 <div className="container">
                     <h1>The Transformative Power of Meditation: Nurturing Inner Peace and Well-Being</h1><br />
-                  
+
                     <header className="hero">
-                    <img className="hero-img" src={img2} />
+                        <img className="hero-img" src={img2} />
                     </header>
                     <br />
                     <p>In today's fast-paced and often chaotic world, finding moments of tranquility and self-discovery has become more crucial than ever. Meditation, an ancient practice with roots in various cultures, has emerged as a beacon of hope for those seeking solace, self-awareness, and improved well-being. In this blog, we will delve into the profound benefits of meditation and explore how incorporating this practice into our lives can lead to a more balanced and fulfilling existence. </p>
@@ -48,15 +59,15 @@ function SubBlog1() {
                     <footer className="footer">
                         <div className="footer-header">Contact me with Social-Media platforms</div>
                         <ul className="social-links list-non-bullet">
-                            <li className="list-item-inline"><Link className="link" to="https://www.instagram.com/ankittiwari328/" target='_blank'>Instagram</Link></li>
-                            <li className="list-item-inline"><Link className="link" to="https://twitter.com/home" target='_blank'>Twitter</Link></li>
-                            <li className="list-item-inline"><Link className="link" to="https://www.linkedin.com/in/ankit-tiwari-7534a41b3/" target='_blank'>Linkedin</Link></li>
+                            <li className="list-item-inline"><Link className="link" to="https://www.instagram.com/ankittiwari328/" target='_blank'><FaInstagram className='Instagram' /></Link></li>
+                            <li className="list-item-inline"><Link className="link" to="https://twitter.com/home" target='_blank'><FaTwitter className='twitter' /></Link></li>
+                            <li className="list-item-inline"><Link className="link" to="https://www.linkedin.com/in/ankit-tiwari-7534a41b3/" target='_blank'><FaLinkedin className='linkedin' /></Link></li>
                         </ul>
                     </footer>
                 </div>
             </section>
 
-        </div>
+        </>
     )
 }
 

@@ -1,17 +1,31 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './App.css';
 import { Link } from 'react-router-dom';
+import { FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa"
+import { GiHamburgerMenu } from 'react-icons/gi';
 function Blogs() {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
+  const toggleNav = () => {
+    setIsNavOpen(!isNavOpen);
+  };
   return (
     <div>
-      <nav className="navigation container">
+      <nav className='navigation'>
 
         <div className="nav-brand">Portfolio</div>
-        <ul className="list-non-bullet nav-pills ">
-          <li className="list-item-inline"><Link className="link" to="/">Home</Link></li>
-          <li className="list-item-inline"><Link className="link" to="/projects">Projects</Link></li>
-          <li className="list-item-inline"><Link className="link  link-active" to="/blogs">Blogs</Link></li>
-        </ul>
+        <div className='hamburger-menu' onClick={toggleNav} >
+          <GiHamburgerMenu />
+        </div>
+        <div className={
+          isNavOpen ? "navigation-menu expanded" : "navigation-menu"
+        }>
+          <ul>
+            <li><Link className="link2" to="/">Home</Link></li>
+            <li><Link className="link2" to="/projects">Projects</Link></li>
+            <li><Link className="link2 link-active" to="/blogs">Blogs</Link></li>
+          </ul>
+        </div>
       </nav>
       <header className="hero">
         <h1 className="hero-heading">
@@ -34,13 +48,13 @@ function Blogs() {
         </div>
       </section>
       <footer className="footer">
-                        <div className="footer-header">Contact me with Social-Media platforms</div>
-                        <ul className="social-links list-non-bullet">
-                            <li className="list-item-inline"><Link className="link" to="https://www.instagram.com/ankittiwari328/" target='_blank'>Instagram</Link></li>
-                            <li className="list-item-inline"><Link className="link" to="https://twitter.com/home" target='_blank'>Twitter</Link></li>
-                            <li className="list-item-inline"><Link className="link" to="https://www.linkedin.com/in/ankit-tiwari-7534a41b3/" target='_blank'>Linkedin</Link></li>
-                        </ul>
-                    </footer>
+        <div className="footer-header">Contact me with Social-Media platforms</div>
+        <ul className="social-links list-non-bullet">
+          <li className="list-item-inline"><Link className="link" to="https://www.instagram.com/ankittiwari328/" target='_blank'><FaInstagram className='Instagram' /></Link></li>
+          <li className="list-item-inline"><Link className="link" to="https://twitter.com/home" target='_blank'><FaTwitter className='twitter' /></Link></li>
+          <li className="list-item-inline"><Link className="link" to="https://www.linkedin.com/in/ankit-tiwari-7534a41b3/" target='_blank'><FaLinkedin className='linkedin' /></Link></li>
+        </ul>
+      </footer>
 
     </div>
   )
