@@ -77,12 +77,12 @@ function Projects() {
             <ul className="list-non-bullet Ow">
                 <li>
                     <div className="container container-center  section">
-                        <h1>Quote Generator</h1>
-                        <small>November,2022</small>
-                        <p>A quote generator app with <strong>JavaScript</strong>. You get new quotes and also share on your twitter handler. </p>
+                        <h1>Password Generator</h1>
+                        <small>September,2023</small>
+                        <p>A Password generator app with <strong>JavaScript</strong>. Here user generate the new Password and copy it if they want to manage the lenght of password than they easily to do in app. </p>
                         <ul className="list-non-bullet">
-                            <li className="list-item"> <Link className="link primary-link" to="https://golden-dieffenbachia-3ed8ff.netlify.app/" target='_blank'>See Projects Demo</Link></li>
-                            <li> <Link className="link secondary-link" to="https://github.com/itsankittiwari/quote-generator" target='_blank'>Check Source Code</Link></li>
+                            <li className="list-item"> <Link className="link primary-link" to="https://main--heartfelt-starlight-c26e07.netlify.app/" target='_blank'>See Projects Demo</Link></li>
+                            <li> <Link className="link secondary-link" to="https://github.com/itsankittiwari/Password_generator" target='_blank'>Check Source Code</Link></li>
                         </ul>
                     </div>
                 </li>
