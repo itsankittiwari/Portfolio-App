@@ -39,14 +39,14 @@ function Home() {
             <section className="section Ow">
                 <div className="container">
                     <h1>Skills</h1>
-                    <p>I'm famillar with HTML5, CSS3, Git, JavaScript, NodeJs, ReactJs, Mysql and Web Hosting</p>
+                    <p>I'm famillar with HTML5, CSS3, Tailwind, Bootstrap, JavaScript, ReactJs, NodeJs, Mysql, Excel and Power-Bi</p>
                 </div>
             </section>
             <section className="section">
                 <div className="container container-center">
                     <h1>Experience</h1>
                     <p>I have been working as a data analyst since last 6 months in Droisys india pvt ltd but due to my interest in web development, I want to work in web development field.</p>
-                    <p>I have given my linkedin profile on the button below, you can also know about me from here</p>
+                    <p>I have given my linkedin profile on the button below, you can also know about me from here.</p>
                     <br />
                     <Link className="link primary-link" to="https://www.linkedin.com/in/ankit-tiwari-7534a41b3/" target='_blank'>Linkedin Profile</Link>
                 </div>
@@ -55,7 +55,7 @@ function Home() {
             <section className="section Ow">
                 <div className="container container-center">
                     <h1>Projects</h1>
-                    <p>Here, you can browse my projects I have done and hosted online, to see my work.</p>
+                    <p>Feel free to browse my projects that I have completed and hosted online to see my work.</p>
                     <br />
                     <Link className="link primary-link" to="/projects" >See Projects</Link>
                 </div>
@@ -64,7 +64,7 @@ function Home() {
             <section className="section">
                 <div className="container container-center">
                     <h1>Blogs</h1>
-                    <p>I am also working on some technical and non-technical blogs. I like to document my journey of learning.</p>
+                    <p>I am working on a variety of technical and non-technical blogs, documenting my journey of learning. Through these blogs, I aim to share my experiences, insights, and the knowledge I gain along the way.</p>
                     <br />
                     <Link className="link secondary-link" to="/blogs">Read Blogs</Link>
                 </div>
